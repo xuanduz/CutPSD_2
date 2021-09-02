@@ -1,0 +1,102 @@
+.section-2-wrap{
+    width: 100%;
+    margin-top: 200px;
+    .section-2{
+        width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &-text{
+            margin-top: 95px;
+            max-width: 470px;
+        }
+        .section-2-img{
+            width: 700px;
+            height: 696px;
+            position: relative;
+            .img1{
+                position: absolute;
+                z-index: 3;
+            }
+            .img2 {
+                position: absolute;
+                // left: 110px;
+                top: 0;
+                transition: 0.3s;
+                z-index: 4;
+            }
+            .img-below{
+                position: absolute;
+                // height: 700px;
+                top: 0;
+                z-index: 1;
+            }
+            .img-dots{
+                position: absolute;
+                bottom: -75px;
+                // width: 300px;
+                height: 270px;
+                z-index: -20;
+            }
+        }
+        .hide-img img{
+            transition: 0.3s;
+            opacity: 0;
+        }
+        .show-img img{
+            transition: 0.3s;
+            opacity: 1;
+        }
+    }
+}
+.section-2-wrap{
+    @include maxWidth(1400px){
+        .section-2{
+            width: 80%;
+        }
+    }
+    @include maxWidth(1200px){
+        .section-2{
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            &-text{
+                width: 500px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .section-2-img{
+                width: 100%;
+                height: 600px;
+                margin-top: 40px;
+                .img1,
+                .img1 img{
+                    width: 100%;
+                }
+                .img2,
+                .img2 img{
+                    width: 100%;
+                }
+                .img-below,
+                .img-below img{
+                    width: 100%;
+                }
+                .img-dots{
+                    bottom: -150px;
+                }
+                .img-dots img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include maxWidth(768px){
+        .section-2{
+            .section-2-img{
+                height: 450px;
+            }
+        }
+    }
+}
+

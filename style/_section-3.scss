@@ -1,0 +1,90 @@
+.section-3-wrap{
+    margin-top: 200px;
+    .section-3{
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .section-3-txt{
+        width: 485px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .section-3-img{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: auto auto;
+        .img-mb{
+            margin-bottom: 30px;
+        }
+        .section-3-img-item{
+            position: relative;
+            p{
+                font-family: $secondary-font;
+                font-size: 36px;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 90%;
+                width: 570px;
+                height: 50px;
+                border-radius: 10px;
+                z-index: 3;
+                transition: all 0.3s;
+                opacity: 0;
+            }
+        }
+        .section-3-img-item:hover p{
+            background-color: #222831cc;
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            opacity: 1;
+        }
+    }
+    .section-3-btn-wrap{
+        margin-top: 70px;
+        width: 100%;
+        text-align: center;
+    }
+}
+.section-3-wrap{
+    width: 100%;
+    @include maxWidth(1170px){
+        .section-3{
+            width: 90%;
+            &-img{
+                width: 100%;
+                display: inline;
+                &-g{
+                    width: 100%;
+                    .section-3-img-item{
+                        width: 70%;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            width: 100%;
+                        }
+                        p{
+                            width: 100%;
+                        }
+                    }
+                    .img-mb{
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    @include maxWidth(768px){
+        .section-3{
+            &-txt{
+                width: 70%;
+            }
+        }
+    }
+}

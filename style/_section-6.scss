@@ -1,0 +1,95 @@
+.section-6-wrap{
+    padding-top: 200px;
+    margin: 0 auto;
+    .section-6{
+        &-txt{
+            width: 100%;
+            text-align: center;
+            p{
+                width: 440px;
+                margin: 0 auto;
+                margin-top: 25px;
+            }
+        }
+        &-carousel{
+            margin-top: 45px;
+            width: 100%;
+            position: relative;
+            .carousel-wrapper{
+                display: flex;
+                overflow: hidden;
+                height: 600px;
+                padding-top: 17px;
+                .carousel-item{
+                    width: 830px;
+                    height: 456px;
+                    margin: 0 35px;
+                    background-color: $gray-light;
+                    text-align: center;
+                    position: relative;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    box-shadow: 0 0 30px #202329;
+                    &-icon{
+                        position: absolute;
+                        top: -17px;
+                        z-index: 100;
+                        width: 100%;
+                        img{
+                            width: 50px;
+                            height: 33px;
+                            margin: 0 auto;
+                        }
+                    }
+                    &-txt{
+                        width: 630px;
+                        margin: 0 auto;
+                        padding-top: 67px;
+                        p{
+                            font-family: $primary-font;
+                            font-size: 30px;
+                            line-height: 48px;
+                            color: #eeeeee;
+                        }
+                    }
+                    &-ava{
+                        width: 100%;
+                        img{
+                            width: 84px;
+                            height: 84px;
+                            margin: 0 auto;
+                            margin-top: 47px;
+                        }
+                        .name-custom{
+                            font-family: $secondary-font;
+                            font-size: 18px;
+                            line-height: 23px;
+                            font-weight: bold;
+                            color: $gray-font;
+                            margin-top: 23px;
+                        }
+                    }
+                }
+                .item-active{
+                    margin-left: -21%;
+                }
+                @include maxWidth(768px){
+                    .carousel-item{
+                        width: 500px;
+                        &-txt{
+                            width: 450px;
+                            p{
+                                font-size: 20px;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.carousel-item-wrapper{
+    padding-top: 17px;
+}
